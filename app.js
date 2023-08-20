@@ -1,17 +1,11 @@
 const PORT = process.env.PORT || 3004; // Defining the PORT we used for communication server
 const INDEX =  '/index.html' // Page for the website
 const express = require('express') // Node.js Application Framework
-const io = require("socket.io")(3000, {
-    cors:{
-        origin: false,
-    },
-});
+
 
 console.log('hi');
 
-io.on("connection", socket => {
-    console.log(socket.id)
-})
+
 
 const app2 = express()
     .get('/', (req,res) =>{
@@ -26,7 +20,6 @@ io2.on('connection', function(socket) {
         
         console.log( data );
         
-        io.emit('lights', data);
     
     });
     

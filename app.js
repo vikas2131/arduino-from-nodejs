@@ -4,7 +4,7 @@ const express = require('express') // Node.js Application Framework
 var fs = require('fs');
 const io = require("socket.io")(3000, {
     cors:{
-        origin: ["http://49.36.139.30:3002"],
+        origin: false,
     },
 });
 

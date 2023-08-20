@@ -11,16 +11,33 @@
 
         <h1>Communicating from Node.js to an Arduino</h1>
 
-        <button id="lightOn">Turn Light On</button>
+        <button id="lightOn1">Turn Light1 On</button>
+        <button id="lightOn2">Turn Light2 On</button>
+        <button id="lightOn3">Turn Light3 On</button>
+
         <button id="lightOff">Turn Light Off</button>
+
+        <h2 id="listen"></h2>
 
         <script>
             
         var socket = io();
 
-        document.getElementById('lightOn').onclick = function() {
-            
+        document.getElementById('lightOn1').onclick = function() {
+            document.getElementById("listen").innerHTML = "1";
             socket.emit('lights', { "status":"1" });
+                
+        };
+
+        document.getElementById('lightOn2').onclick = function() {
+            
+            socket.emit('lights', { "status":"2" });
+                
+        };
+
+        document.getElementById('lightOn3').onclick = function() {
+            
+            socket.emit('lights', { "status":"3" });
                 
         };
             

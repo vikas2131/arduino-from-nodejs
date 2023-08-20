@@ -1,4 +1,5 @@
 var http = require('http');
+
 var fs = require('fs');
 var index = fs.readFileSync( 'index.html');
 
@@ -9,7 +10,7 @@ const parser = new parsers.Readline({
     delimiter: '\r\n'
 });
 
-var port = new SerialPort('/dev/tty.wchusbserialfa1410',{ 
+var port = new SerialPort('/dev/tty.usbmodem101',{ 
     baudRate: 9600,
     dataBits: 8,
     parity: 'none',

@@ -3,7 +3,10 @@
     "version": "0.0.1",
     "description": "Communication between HTML/JavaScript and Arduino",
     "dependencies": {
-        "socket.io": "^2.0.4",
-        "serialport": "^9.0.1"
+        "serialport": "^9.2.8",
+        "socket.io": "^4.7.2"
+    },
+    "scripts": {
+        "start": "node app.js"
     }
 }

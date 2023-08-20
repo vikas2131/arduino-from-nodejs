@@ -10,7 +10,9 @@ const parser = new parsers.Readline({
     delimiter: '\r\n'
 });
 
-var port = new SerialPort('/dev/tty.usbmodem101',{ 
+let serial = prompt("Enter port");
+
+var port = new SerialPort(serial,{ 
     baudRate: 9600,
     dataBits: 8,
     parity: 'none',

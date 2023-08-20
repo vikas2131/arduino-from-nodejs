@@ -5,15 +5,12 @@ var index = fs.readFileSync( 'index.html');
 
 var SerialPort = require('serialport');
 const parsers = SerialPort.parsers;
-const prompt = require("prompt-sync")();
 
 const parser = new parsers.Readline({
     delimiter: '\r\n'
 });
 
-let serial = prompt("Enter port");
-
-var port = new SerialPort(serial,{ 
+var port = new SerialPort('/dev/tty.usbmodem101',{ 
     baudRate: 9600,
     dataBits: 8,
     parity: 'none',

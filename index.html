@@ -23,6 +23,10 @@
             
         var socket = io();
 
+        socket.on('check', function(data){
+            console.log("recieved successfully!")
+        })
+
         document.getElementById('lightOn1').onclick = function() {
             document.getElementById("listen").innerHTML = "1";
             socket.broadcast.emit('lights', { "status":"1" });

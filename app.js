@@ -1,12 +1,13 @@
 const PORT = process.env.PORT || 3004; // Defining the PORT we used for communication server
 const INDEX =  '/index.html' // Page for the website
 const express = require('express') // Node.js Application Framework
-var fs = require('fs');
 const io = require("socket.io")(3000, {
     cors:{
         origin: false,
     },
 });
+
+console.log('hi');
 
 io.on("connection", socket => {
     console.log(socket.id)

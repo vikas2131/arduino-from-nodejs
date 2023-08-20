@@ -14,12 +14,12 @@ io.on("connection", socket => {
     console.log(socket.id)
 })
 
-const app = express()
+const app2 = express()
     .get('/', (req,res) =>{
     res.sendFile(INDEX, {root : __dirname})}) //Basic Routing when website hit '/', respond serve index.html
     .listen(PORT, ()=> console.log(`Listening on ${PORT}`))
 
-var io2 = require('socket.io')(app);
+var io2 = require('socket.io')(app2);
 
 io2.on('connection', function(socket) {
     

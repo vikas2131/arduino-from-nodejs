@@ -1,3 +1,6 @@
+const PORT = process.env.PORT || 3004; // Defining the PORT we used for communication server
+const INDEX =  '/index.html' // Page for the website
+const express = require('express') // Node.js Application Framework
 var http = require('http');
 var fs = require('fs');
 var index = fs.readFileSync( 'index.html');
@@ -11,10 +14,10 @@ io.on("connection", socket => {
     console.log(socket.id)
 })
 
-var app = http.createServer(function(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(index);
-});
+const app = express()
+    .get('/', (req,res) =>{
+    res.sendFile(INDEX, {root : __dirname})}) //Basic Routing when website hit '/', respond serve index.html
+    .listen(PORT, ()=> console.log(`Listening on ${PORT}`))
 
 var io2 = require('socket.io')(app);
 
@@ -31,4 +34,3 @@ io2.on('connection', function(socket) {
 });
 
 
-app.listen(3001);

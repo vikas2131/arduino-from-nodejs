@@ -1,12 +1,10 @@
 const PORT = process.env.PORT || 3004; // Defining the PORT we used for communication server
 const INDEX =  '/index.html' // Page for the website
 const express = require('express') // Node.js Application Framework
-var http = require('http');
 var fs = require('fs');
-var index = fs.readFileSync( 'index.html');
 const io = require("socket.io")(3000, {
     cors:{
-        origin: ["http://localhost:3002"],
+        origin: ["http://49.36.139.30:3002"],
     },
 });
 

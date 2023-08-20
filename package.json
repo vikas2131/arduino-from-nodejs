@@ -2,6 +2,7 @@
     "name": "basic-socket",
     "version": "0.0.1",
     "description": "Communication between HTML/JavaScript and Arduino",
+    "main": "app.js",
     "dependencies": {
         "serialport": "^9.2.8",
         "socket.io": "^4.7.2"

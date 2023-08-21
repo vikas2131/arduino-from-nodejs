@@ -3,6 +3,7 @@
     <head>
         <title>Communicating from Node.js to an Arduino</title>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js'></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
@@ -40,25 +41,21 @@
         })
 
         document.getElementById('lightOn1').onclick = function() {
-            document.getElementById("listen").innerHTML = "1";
             socket.emit('lights', { "status":"1" });
                 
         };
 
         document.getElementById('lightOn2').onclick = function() {
-            document.getElementById("listen").innerHTML = "2";
             socket.emit('lights', { "status":"2" });
                 
         };
 
         document.getElementById('lightOn3').onclick = function() {
-            document.getElementById("listen").innerHTML = "3";
             socket.emit('lights', { "status":"3" });
                 
         };
             
-        document.getElementById('lightOff').onclick = function(){
-            document.getElementById("listen").innerHTML = "0";
+        document.getElementById('lightOn4').onclick = function(){
             socket.emit('lights', { "status":"0" });
             
         };

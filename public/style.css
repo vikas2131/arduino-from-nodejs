@@ -1,0 +1,28 @@
+.flex{
+    display: flex;
+}
+
+.container{
+    width: 300px;
+    height: 540px;
+    background-color:black;
+    margin-right: 20px;
+}
+
+.arrow_left{
+    transform: rotate(90deg);
+
+}
+
+.border{
+    border-radius: 10px;
+}
+
+.ma{
+    margin-left: 53px;
+}
+
+.button{
+    margin-top: 400px;
+    margin-left: 70px;
+}

@@ -14,6 +14,7 @@ io.on("connection", socket => {
 })
 
 const app2 = express()
+    .use(express.static( __dirname + '/public'))
     .get('/', (req,res) =>{
     res.sendFile(INDEX, {root : __dirname})}) //Basic Routing when website hit '/', respond serve index.html
     .listen(PORT, ()=> console.log(`Listening on ${PORT}`))

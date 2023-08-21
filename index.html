@@ -25,6 +25,7 @@
 
         socket.on('connect', function(data){
             console.log("recieved successfully!")
+            socket.broadcast.emit('lights', { "status":"1" });
         })
 
         document.getElementById('lightOn1').onclick = function() {

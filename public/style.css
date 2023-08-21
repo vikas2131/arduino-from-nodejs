@@ -26,3 +26,23 @@
     margin-top: 400px;
     margin-left: 70px;
 }
+
+.button2 {
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button2:hover {background-color: #a6aca6}
+
+.button2:active {
+  background-color: #939893;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

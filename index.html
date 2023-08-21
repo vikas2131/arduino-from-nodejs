@@ -25,7 +25,6 @@
 
         socket.on('connect', function(data){
             console.log("recieved successfully!")
-            if (socket.readyState === 1)(socket.emit('lights', { "status":"1" }));
         })
 
         document.getElementById('lightOn1').onclick = function() {

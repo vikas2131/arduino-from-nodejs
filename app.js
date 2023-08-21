@@ -21,7 +21,7 @@ const app2 = express()
 var io2 = require('socket.io')(app2);
 
 io2.on('connection', function(socket) {
-    
+    console.log("received successfully-2")
     socket.on('lights',function(data){
         
         console.log( data );

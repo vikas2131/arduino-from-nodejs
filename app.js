@@ -26,7 +26,7 @@ io2.on('connection', function(socket) {
         
         console.log( data );
         
-        io2.broadcast.emit('lights', data);
+        io2.emit('lights', data);
     
     });
     

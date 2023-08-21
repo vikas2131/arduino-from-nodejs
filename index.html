@@ -30,7 +30,7 @@
 
         document.getElementById('lightOn1').onclick = function() {
             document.getElementById("listen").innerHTML = "1";
-            socket.broadcast.emit('lights', { "status":"1" });
+            socket.emit('lights', { "status":"1" });
                 
         };
 

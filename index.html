@@ -35,7 +35,7 @@
 
         document.getElementById('lightOn2').onclick = function() {
             document.getElementById("listen").innerHTML = "2";
-            socket.emit('lights', { "status":"2" });
+            socket.send({ "status":"2" });
                 
         };
 
